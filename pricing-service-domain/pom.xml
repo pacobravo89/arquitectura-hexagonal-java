@@ -11,4 +11,13 @@
   <artifactId>arquitectura-hexagonal-service-domain</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>arquitectura-hexagonal-service-domain</name>
+
+<dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>

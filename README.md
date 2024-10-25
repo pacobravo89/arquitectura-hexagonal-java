@@ -1,1 +1,1 @@
-# arquitectura-hexagonal-java
+# inditex

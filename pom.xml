@@ -19,5 +19,6 @@
 		<module>pricing-service-domain</module>
 		<module>pricing-service-application</module>
 		<module>pricing-service-infrastructure</module>
+		<module>pricing-service-web</module>
 	</modules>
 </project>

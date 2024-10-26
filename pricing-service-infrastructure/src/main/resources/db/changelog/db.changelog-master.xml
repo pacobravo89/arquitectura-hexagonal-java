@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1-create-schema" author="admin">
+        <createTable tableName="PRICES">
+            <column name="ID" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="BRAND_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRODUCT_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="START_DATE" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="END_DATE" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICE_LIST" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRIORITY" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICE" type="DECIMAL(10,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2-initial-data" author="admin">
+        <insert tableName="PRICES">
+            <column name="BRAND_ID" value="1"/>
+            <column name="START_DATE" valueDate="2020-06-14T00:00:00"/>
+            <column name="END_DATE" valueDate="2020-12-31T23:59:59"/>
+            <column name="PRICE_LIST" value="1"/>
+            <column name="PRODUCT_ID" value="35455"/>
+            <column name="PRIORITY" value="0"/>
+            <column name="PRICE" value="35.50"/>
+            <column name="CURRENCY" value="EUR"/>
+        </insert>
+        <insert tableName="PRICES">
+            <column name="BRAND_ID" value="1"/>
+            <column name="START_DATE" valueDate="2020-06-14T15:00:00"/>
+            <column name="END_DATE" valueDate="2020-06-14T18:30:00"/>
+            <column name="PRICE_LIST" value="2"/>
+            <column name="PRODUCT_ID" value="35455"/>
+            <column name="PRIORITY" value="1"/>
+            <column name="PRICE" value="25.45"/>
+            <column name="CURRENCY" value="EUR"/>
+        </insert>
+        <insert tableName="PRICES">
+            <column name="BRAND_ID" value="1"/>
+            <column name="START_DATE" valueDate="2020-06-15T00:00:00"/>
+            <column name="END_DATE" valueDate="2020-06-15T11:00:00"/>
+            <column name="PRICE_LIST" value="3"/>
+            <column name="PRODUCT_ID" value="35455"/>
+            <column name="PRIORITY" value="1"/>
+            <column name="PRICE" value="30.50"/>
+            <column name="CURRENCY" value="EUR"/>
+        </insert>
+        <insert tableName="PRICES">
+            <column name="BRAND_ID" value="1"/>
+            <column name="START_DATE" valueDate="2020-06-15T16:00:00"/>
+            <column name="END_DATE" valueDate="2020-12-31T23:59:59"/>
+            <column name="PRICE_LIST" value="4"/>
+            <column name="PRODUCT_ID" value="35455"/>
+            <column name="PRIORITY" value="1"/>
+            <column name="PRICE" value="38.95"/>
+            <column name="CURRENCY" value="EUR"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

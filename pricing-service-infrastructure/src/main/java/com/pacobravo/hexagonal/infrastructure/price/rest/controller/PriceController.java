@@ -4,11 +4,11 @@ import com.pacobravo.hexagonal.application.price.handler.PriceHandler;
 import com.pacobravo.hexagonal.domain.price.model.dto.PriceResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 @Slf4j
 @RestController
@@ -22,9 +22,12 @@ public class PriceController {
     }
 
     @Operation(summary = "Consulta el precio de un producto filtrando por marca y hora")
-    @PostMapping()
-    public ResponseEntity<PriceResponse> getPrice(@RequestBody PriceIn priceIn) {
-        PriceResponse price = priceHandler.getPrices(priceIn.getProductId(), priceIn.getBrandId(), priceIn.getApplicationDate());
+    @GetMapping()
+    public ResponseEntity<PriceResponse> getPrice(@RequestParam("applicationDate")
+                                                      @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime applicationDate,
+                                                  @RequestParam("productId") Long productId,
+                                                  @RequestParam("brandId") Long brandId) {
+        PriceResponse price = priceHandler.getPrices(productId, brandId, applicationDate);
 
         if (price == null) {
             return ResponseEntity.notFound().build();

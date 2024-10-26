@@ -9,12 +9,15 @@
 	"item": [
 		{
 			"name": "checkPrices",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,12 +25,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},
@@ -59,12 +76,15 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,12 +92,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},
@@ -109,12 +143,15 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -122,12 +159,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},
@@ -159,12 +210,15 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -172,12 +226,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},
@@ -209,12 +277,15 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -222,12 +293,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},
@@ -260,12 +345,15 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"raw": "\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -273,12 +361,26 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/prices",
+					"raw": "{{baseUrl}}/prices?productId={{productId}}&brandId={{brandId}}&applicationDate={{applicationDate}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{productId}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{brandId}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "{{applicationDate}}"
+						}
 					]
 				}
 			},

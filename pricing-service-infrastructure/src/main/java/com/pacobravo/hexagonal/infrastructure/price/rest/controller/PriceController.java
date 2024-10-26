@@ -24,8 +24,7 @@ public class PriceController {
     @Operation(summary = "Consulta el precio de un producto filtrando por marca y hora")
     @PostMapping()
     public ResponseEntity<PriceResponse> getPrice(@RequestBody PriceIn priceIn) {
-        log.info("estoy aqui");
-        PriceResponse price = priceHandler.getPrices(priceIn.getProductId(), priceIn.getBrandId(), priceIn.getStartDate(), priceIn.getEndDate());
+        PriceResponse price = priceHandler.getPrices(priceIn.getProductId(), priceIn.getBrandId(), priceIn.getApplicationDate());
 
         if (price == null) {
             return ResponseEntity.notFound().build();

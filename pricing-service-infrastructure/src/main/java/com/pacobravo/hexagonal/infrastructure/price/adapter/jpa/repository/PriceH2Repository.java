@@ -23,8 +23,8 @@ public class PriceH2Repository implements PriceRepositoryPort {
     }
 
     @Override
-    public List<Price> findPrices(Long productId, Long brandId, LocalDateTime startDate, LocalDateTime endDate) {
-        List<PriceEntity> pricesEntities = priceSpringJpaAdapterRepository.findByProductIdAndBrandIdAndStartDateBeforeAndEndDateAfterOrderByPriorityDesc(productId, brandId, startDate, endDate);
+    public List<Price> findPrices(Long productId, Long brandId, LocalDateTime applicationDate) {
+        List<PriceEntity> pricesEntities = priceSpringJpaAdapterRepository.findApplicablePrice(applicationDate, productId, brandId);
         return pricesEntities.stream()
                 .map(priceDboMapper::toDomain)
                 .collect(Collectors.toList());

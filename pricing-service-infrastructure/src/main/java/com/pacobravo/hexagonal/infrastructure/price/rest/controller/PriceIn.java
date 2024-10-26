@@ -1,5 +1,7 @@
 package com.pacobravo.hexagonal.infrastructure.price.rest.controller;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.pacobravo.hexagonal.infrastructure.price.rest.deserializer.LocalDateTimeDeserializer;
 import lombok.Data;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -10,6 +12,6 @@ public class PriceIn {
 
     private Long productId;
     private Long brandId;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    private LocalDateTime applicationDate;
 }

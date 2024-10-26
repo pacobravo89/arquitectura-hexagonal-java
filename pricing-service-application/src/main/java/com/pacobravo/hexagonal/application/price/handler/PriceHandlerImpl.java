@@ -18,7 +18,7 @@ public class PriceHandlerImpl implements PriceHandler {
         this.priceDtoMapper = priceDtoMapper;
     }
 
-    public PriceResponse getPrices(Long productId, Long brandId, LocalDateTime startDate, LocalDateTime endDate){
-        return priceDtoMapper.toDto(priceService.getPrices(productId, brandId, startDate, endDate));
+    public PriceResponse getPrices(Long productId, Long brandId, LocalDateTime applicationDate){
+        return priceDtoMapper.toDto(priceService.getPrices(productId, brandId, applicationDate));
     }
 }

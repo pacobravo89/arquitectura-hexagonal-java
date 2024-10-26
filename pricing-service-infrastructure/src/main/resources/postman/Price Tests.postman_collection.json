@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "b2a5c327-450e-4f82-a6d1-6cae54c9587c",
+		"name": "Price Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16558975",
+		"_collection_link": "https://grey-astronaut-728139.postman.co/workspace/Team-Cupimar~6321ef82-fbd5-4530-8a72-36090d87e839/collection/16558975-b2a5c327-450e-4f82-a6d1-6cae54c9587c?action=share&source=collection_link&creator=16558975"
+	},
+	"item": [
+		{
+			"name": "checkPrices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 1 - 14/06 a las 10:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"applicationDate\", \"2020-06-14T10:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 2 - 14/06 a las 16:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"applicationDate\", \"2020-06-14T16:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 3 - 14/06 a las 21:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"applicationDate\", \"2020-06-14T21:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 4 - 15/06 a las 10:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"applicationDate\", \"2020-06-15T10:00:00\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test 4 - 16/06 a las 21:00",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"applicationDate\", \"2020-06-16T21:00:00\");\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{productId}},\r\n    \"brandId\": {{brandId}},\r\n    \"applicationDate\": \"{{applicationDate}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/prices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"prices"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

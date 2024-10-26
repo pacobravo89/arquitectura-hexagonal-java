@@ -4,6 +4,7 @@ import com.pacobravo.hexagonal.domain.price.model.entity.Price;
 import com.pacobravo.hexagonal.domain.price.port.repository.PriceRepositoryPort;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 
 public class PriceService {
@@ -14,8 +15,8 @@ public class PriceService {
         this.priceRepositoryPort = priceRepositoryPort;
     }
 
-    public Price getPrices(Long productId, Long brandId, LocalDateTime startDate, LocalDateTime endDate) {
-        List<Price> pricesList = priceRepositoryPort.findPrices(productId,brandId,startDate,endDate);
-        return pricesList.stream().findFirst().orElse(null);
+    public Price getPrices(Long productId, Long brandId, LocalDateTime applicationDate) {
+        List<Price> pricesList = priceRepositoryPort.findPrices(productId, brandId, applicationDate);
+        return pricesList.stream().max(Comparator.comparing(Price::getPriority)).orElse(null);
     }
 }
